@@ -12,7 +12,7 @@ function App() {
   });
   return (
     <>
-      <Canvas>
+      <Canvas flat>
         <fog
           attach="fog"
           args={[controls.fogColor, controls.fogNear, controls.fogFar]}
