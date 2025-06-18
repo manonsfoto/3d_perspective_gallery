@@ -1,12 +1,11 @@
 import Floor from "./Floor";
-import Lights from "./Lights";
-import { Environment } from "@react-three/drei";
+import Arches from "./Arches";
 const Experience = () => {
   return (
     <>
       <color attach="background" args={["#ffffff"]} />
-      <Lights />
       <Floor />
+      <Arches />
     </>
   );
 };
