@@ -1,17 +1,20 @@
-import { Environment } from "@react-three/drei";
+import { useRef } from "react";
+import { useHelper } from "@react-three/drei";
+import * as THREE from "three";
 
 const Lights = () => {
+  const directionalLightRef = useRef();
+
+  useHelper(directionalLightRef, THREE.DirectionalLightHelper, 1, "black");
+
   return (
     <>
       <ambientLight intensity={1.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-      <Environment
-        preset="sunset"
-        background={true}
-        blur={0.5}
-        backgroundBlurriness={0.5}
-        backgroundIntensity={1.5}
-      ></Environment>
+      <directionalLight
+        ref={directionalLightRef}
+        position={[-2, 8, 2]}
+        intensity={1}
+      />
     </>
   );
 };
