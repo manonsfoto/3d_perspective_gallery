@@ -4,7 +4,7 @@ import { Environment } from "@react-three/drei";
 const Experience = () => {
   return (
     <>
-      <color attach="background" args={[0.9, 0.9, 0.9, 1]} />
+      <color attach="background" args={["#ffffff"]} />
       <Lights />
       <Floor />
     </>

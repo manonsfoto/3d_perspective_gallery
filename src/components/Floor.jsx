@@ -10,9 +10,11 @@ const Floor = () => {
   const spacing = 1;
   const startZ = -7;
 
-
   const texture = useTexture("./floor-matcap.webp");
-  const matcapMaterial = new THREE.MeshMatcapMaterial({ matcap: texture });
+  const matcapMaterial = new THREE.MeshMatcapMaterial({
+    matcap: texture,
+   
+  });
 
   useEffect(() => {
     if (floor.scene) {
