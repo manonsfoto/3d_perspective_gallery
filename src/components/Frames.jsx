@@ -5,9 +5,9 @@ import { useFrame } from "@react-three/fiber";
 import framesVertexShader from "../shaders/frames/vertex.glsl";
 import framesFragmentShader from "../shaders/frames/fragment.glsl";
 
-const Frames = () => {
+const Frames = ({ imageUrl, position }) => {
   const shaderRef = useRef();
-  const texture = useTexture("./kunstpalast.webp");
+  const texture = useTexture(imageUrl);
 
   useFrame(({ clock }) => {
     if (shaderRef.current) {
@@ -16,8 +16,8 @@ const Frames = () => {
   });
 
   return (
-    <mesh position={[0, 0, 0]}>
-      <planeGeometry args={[1, 1, 20, 20]} />
+    <mesh position={position} scale={0.5}>
+      <planeGeometry args={[3, 4, 20, 20]} />
       <shaderMaterial
         ref={shaderRef}
         vertexShader={framesVertexShader}
