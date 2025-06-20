@@ -12,7 +12,7 @@ const Experience = () => {
           blendFunction={BlendFunction.OVERLAY}
         />
       </EffectComposer>
-      <OrbitControls enableZoom={false} />
+      {/* <OrbitControls enableZoom={false} /> */}
       <fog attach="fog" args={["#ffffff", 4, 10]} />
       <ScrollControls pages={4} damping={0.5}>
         <FloorScene />
