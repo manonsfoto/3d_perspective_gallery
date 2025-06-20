@@ -7,8 +7,8 @@ import { useControls } from "leva";
 function App() {
   const controls = useControls({
     fogColor: "#ffffff",
-    fogNear: 2,
-    fogFar: 5,
+    fogNear: 4,
+    fogFar: 10,
   });
   return (
     <>

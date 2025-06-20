@@ -1,7 +1,4 @@
 import { useGLTF, useTexture } from "@react-three/drei";
-import CustomShaderMaterial from "three-custom-shader-material";
-import floorVertexShader from "../shaders/floor/vertex.glsl";
-import floorFragmentShader from "../shaders/floor/fragment.glsl";
 import * as THREE from "three";
 
 const Floor = () => {
@@ -9,18 +6,26 @@ const Floor = () => {
   const texture = useTexture("./floor-matcap.webp");
   const matcapMaterial = new THREE.MeshMatcapMaterial({
     matcap: texture,
-  
   });
-  console.log(floor);
+  
   return (
     <>
-      <mesh geometry={floor.scene.children[0].geometry}>
-        <CustomShaderMaterial
-          baseMaterial={matcapMaterial}
-          vertexShader={floorVertexShader}
-          fragmentShader={floorFragmentShader}
-        />
-      </mesh>
+      {Array.from({ length: 4 }).map((_, index) => {
+        const z = index * 4; 
+        const rotationY = index % 2 === 0 ? Math.PI / 2 : -Math.PI / 2;
+
+        return (
+          <mesh
+            key={index}
+            geometry={floor.scene.children[0].geometry}
+            rotation={[0, rotationY, 0]}
+            position={[0, -2, -z]}
+            material={matcapMaterial}
+          >
+          
+          </mesh>
+        );
+      })}
     </>
   );
 };

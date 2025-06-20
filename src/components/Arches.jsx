@@ -1,18 +1,19 @@
 import * as THREE from "three";
 import { useGLTF, useTexture } from "@react-three/drei";
 const Arches = () => {
-     const arch = useGLTF("./arch.glb");
+  const arch = useGLTF("./arch.glb");
 
-  const numberOfArches = 15;
-  const spacing = 1;
-  const startZ = -7;
+  const numberOfArches = 8;
+  const spacing = 2;
+  const startZ = 0;
 
   const texture = useTexture("./floor-matcap.webp");
   const matcapMaterial = new THREE.MeshMatcapMaterial({
     matcap: texture,
   });
-    return ( <>
-     {Array.from({ length: numberOfArches }).map((_, index) => {
+  return (
+    <>
+      {Array.from({ length: numberOfArches }).map((_, index) => {
         const z = startZ + index * spacing;
         const archClone = arch.scene.clone();
 
@@ -27,11 +28,12 @@ const Arches = () => {
             key={index}
             object={archClone}
             rotation={[0, Math.PI / 2, 0]}
-            scale={0.5}
-            position={[0, 1, z]}
+            position={[0, 0, -z]}
           />
         );
-      })}</> );
-}
- 
+      })}
+    </>
+  );
+};
+
 export default Arches;
