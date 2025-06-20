@@ -1,13 +1,13 @@
 import * as THREE from "three";
 import { useGLTF, useTexture } from "@react-three/drei";
 const Arches = () => {
-  const arch = useGLTF("./arch.glb");
+  const arch = useGLTF("./models/arch.glb");
 
-  const numberOfArches = 8;
+  const numberOfArches = 12;
   const spacing = 2;
   const startZ = 0;
 
-  const texture = useTexture("./floor-matcap.webp");
+  const texture = useTexture("./models/floor-matcap.webp");
   const matcapMaterial = new THREE.MeshMatcapMaterial({
     matcap: texture,
   });

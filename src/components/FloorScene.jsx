@@ -4,6 +4,7 @@ import { useScroll } from "@react-three/drei";
 import Floor from "./Floor";
 import Arches from "./Arches";
 import Frames from "./Frames";
+import { images } from "../utils/util";
 
 const FloorScene = () => {
   const groupRef = useRef();
@@ -25,11 +26,16 @@ const FloorScene = () => {
       <color attach="background" args={["#ffffff"]} />
       <Floor />
       <Arches />
-      <Frames imageUrl="./kunstpalast.webp" position={[-1.2, -1, -3]} />
-      <Frames imageUrl="./man.webp" position={[1.2, -1, -6]} />
+      {images.map((image, index) => {
+        const side = index % 2 === 0 ? -1 : 1;
+        const x = side * (1.25 + Math.random() * 1.25);
+        const y = -0.5 + (Math.random() - 0.5) * 0.5;
+        const z = -3 - index * 1.7;
+
+        return <Frames key={image} imageUrl={image} position={[x, y, z]} />;
+      })}
     </group>
   );
 };
-
 
 export default FloorScene;

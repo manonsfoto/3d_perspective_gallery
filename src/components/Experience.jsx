@@ -14,7 +14,7 @@ const Experience = () => {
       </EffectComposer>
       <OrbitControls enableZoom={false} />
       <fog attach="fog" args={["#ffffff", 4, 10]} />
-      <ScrollControls pages={2} damping={0.5}>
+      <ScrollControls pages={4} damping={0.5}>
         <FloorScene />
       </ScrollControls>
     </>
