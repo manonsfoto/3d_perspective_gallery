@@ -7,14 +7,13 @@ const Arches = () => {
   const texture = useTexture("./models/floor-matcap.webp");
   const matcapMaterial = new THREE.MeshMatcapMaterial({ matcap: texture });
 
-  const numberOfArches = 12;
+  const numberOfArches = 14;
   const spacing = 2;
   const startZ = 0;
 
   const instancedMeshRef = useRef();
   const tempObject = new THREE.Object3D();
 
- 
   useEffect(() => {
     if (!instancedMeshRef.current) return;
 
@@ -28,7 +27,6 @@ const Arches = () => {
 
     instancedMeshRef.current.instanceMatrix.needsUpdate = true;
   }, [numberOfArches, spacing, startZ]);
-
 
   const geometry = nodes?.Scene?.children[0]?.geometry;
 

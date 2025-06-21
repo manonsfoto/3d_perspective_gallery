@@ -13,11 +13,8 @@ const FloorScene = () => {
   useFrame((state) => {
     const offset = data.offset;
     state.camera.position.y = -1;
-
     const targetZ = offset * -20;
-
     state.camera.position.z += (targetZ - state.camera.position.z) * 0.1;
-
     state.camera.lookAt(0, -1, state.camera.position.z - 5);
   });
 
@@ -30,7 +27,7 @@ const FloorScene = () => {
         const side = index % 2 === 0 ? -1 : 1;
         const x = side * (1.25 + Math.random() * 1.25);
         const y = -0.5 + (Math.random() - 0.5) * 0.5;
-        const z = -3 - index * 1.7;
+        const z = -8 - index * 1.7;
 
         return <Frames key={image} imageUrl={image} position={[x, y, z]} />;
       })}

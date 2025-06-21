@@ -1,5 +1,6 @@
- varying vec2 vUv;
 uniform float uTime;
+varying vec2 vUv;
+varying float vFogDepth;
 
 void main() {
     vUv = uv;
@@ -10,5 +11,7 @@ void main() {
     vec3 pos = position;
     pos.z += wave;  
     
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+    gl_Position = projectionMatrix * mvPosition;
+    vFogDepth = -mvPosition.z;  
 }

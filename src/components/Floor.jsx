@@ -9,14 +9,13 @@ const Floor = () => {
     matcap: texture,
   });
 
-  const numberOfFloors = 6;
+  const numberOfFloors = 7;
   const spacing = 4;
   const startZ = 0;
 
   const instancedMeshRef = useRef();
   const tempObject = new THREE.Object3D();
 
-  
   useEffect(() => {
     if (!instancedMeshRef.current) return;
 
@@ -32,7 +31,6 @@ const Floor = () => {
 
     instancedMeshRef.current.instanceMatrix.needsUpdate = true;
   }, [numberOfFloors, spacing, startZ]);
-
 
   const geometry = nodes?.Scene?.children[0]?.geometry;
 

@@ -13,7 +13,7 @@ const Experience = () => {
         />
       </EffectComposer>
       {/* <OrbitControls enableZoom={false} /> */}
-      <fog attach="fog" args={["#ffffff", 4, 10]} />
+      <fog attach="fog" args={["#ffffff", 3, 8]} />
       <ScrollControls pages={4} damping={0.5}>
         <FloorScene />
       </ScrollControls>
