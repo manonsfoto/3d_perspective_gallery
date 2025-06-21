@@ -11,4 +11,8 @@ export const images = [
   "./images/10_urbanbuilding_819x1024.webp",
 ];
 
-
+export const fontUrl = {
+  cardo: "./fonts/cardo-v20-latin-italic.woff",
+  bebas: "./fonts/bebas-neue-v9-latin-regular.woff",
+  montserrat: "./fonts/montserrat-v30-latin-regular.woff",
+};

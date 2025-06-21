@@ -5,7 +5,7 @@ import Floor from "./Floor";
 import Arches from "./Arches";
 import Frames from "./Frames";
 import * as THREE from "three";
-import { images } from "../utils/util";
+import { fontUrl, images } from "../utils/util";
 
 const FloorScene = () => {
   const groupRef = useRef();
@@ -25,7 +25,7 @@ const FloorScene = () => {
       );
       textRef.current.position
         .copy(state.camera.position)
-        .add(cameraDirection.multiplyScalar(2)); // 2 units in front of camera
+        .add(cameraDirection.multiplyScalar(2));
     }
   });
 
@@ -34,22 +34,25 @@ const FloorScene = () => {
       <color attach="background" args={["#ffffff"]} />
       <Floor />
       <Arches />
-      <Billboard
-        ref={textRef}
-        follow={true}
-        lockX={false}
-        lockY={false}
-        lockZ={false}
-        scale={0.5}
-      >
-        <Text position-y={0.4} fontSize={0.25} color="black">
-          Selected Photos
+      <Billboard ref={textRef} scale={0.5}>
+        <Text
+          position-y={0.6}
+          fontSize={0.35}
+          color="black"
+          font={fontUrl.cardo}
+        >
+          Selected Photos by
         </Text>
-        <Text position-y={0} fontSize={0.45} color="black">
+        <Text position-y={0} fontSize={0.6} color="black" font={fontUrl.bebas}>
           MINYEONG JEONG
         </Text>
-        <Text position-y={-0.4} fontSize={0.15} color="black">
-          UrbanAesthetic, Minimalism, AnalogVibes
+        <Text
+          position-y={-0.5}
+          fontSize={0.2}
+          color="black"
+          font={fontUrl.montserrat}
+        >
+          Urban Aesthetic
         </Text>
       </Billboard>
 
