@@ -17,7 +17,7 @@ const Frames = ({ imageUrl, position }) => {
 
   return (
     <mesh position={position} scale={0.5}>
-      <planeGeometry args={[3, 4, 20, 20]} />
+      <planeGeometry args={[3, 4, 10, 10]} />
       <shaderMaterial
         ref={shaderRef}
         vertexShader={framesVertexShader}
