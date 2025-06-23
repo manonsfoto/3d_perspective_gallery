@@ -26,6 +26,8 @@ const Frames = ({ imageUrl, position }) => {
           uTexture: { value: texture },
           uTime: { value: 0 },
         }}
+        transparent={true}
+        depthWrite={false}
       />
     </mesh>
   );

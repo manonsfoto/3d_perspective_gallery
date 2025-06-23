@@ -59,7 +59,7 @@ const FloorScene = () => {
       {images.map((image, index) => {
         const side = index % 2 === 0 ? -1 : 1;
         const x = side * (1.25 + Math.random() * 1.25);
-        const y = -0.5 + (Math.random() - 0.5) * 0.5;
+        const y = -0.5 - Math.random() * 0.2;
         const z = -8 - index * 1.7;
 
         return <Frames key={image} imageUrl={image} position={[x, y, z]} />;

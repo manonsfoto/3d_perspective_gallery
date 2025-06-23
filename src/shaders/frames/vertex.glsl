@@ -4,11 +4,11 @@ uniform sampler2D uTexture;
 varying vec2 vUv;
 varying float vFogDepth;
 varying vec3 vColorMod;
+varying float vDistanceToCamera;
 
 void main() {
     vUv = uv;
     
-  
     float diagonal = (position.x + position.y) * 0.5;
     float wave = sin(diagonal * 1.5 + uTime * 1.0) * 0.2;
     
@@ -20,6 +20,7 @@ void main() {
     
     vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
     vFogDepth = -mvPosition.z;
+    vDistanceToCamera = length(mvPosition.xyz);
     
     gl_Position = projectionMatrix * mvPosition;
 }
