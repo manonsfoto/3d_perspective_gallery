@@ -7,6 +7,7 @@ const Floor = () => {
   const texture = useTexture("./models/floor-matcap.webp");
   const matcapMaterial = new THREE.MeshMatcapMaterial({
     matcap: texture,
+    color: new THREE.Color().setHSL(0.78, 0.2, 0.7),
   });
 
   const numberOfFloors = 7;

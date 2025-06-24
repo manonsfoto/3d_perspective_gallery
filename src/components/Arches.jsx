@@ -5,7 +5,10 @@ import { useRef, useEffect } from "react";
 const Arches = () => {
   const { nodes } = useGLTF("./models/arch.glb");
   const texture = useTexture("./models/floor-matcap.webp");
-  const matcapMaterial = new THREE.MeshMatcapMaterial({ matcap: texture });
+  const matcapMaterial = new THREE.MeshMatcapMaterial({
+    matcap: texture,
+    color: new THREE.Color().setHSL(0.78, 0.3, 0.9),
+  });
 
   const numberOfArches = 14;
   const spacing = 2;
