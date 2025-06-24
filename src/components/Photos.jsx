@@ -2,10 +2,10 @@ import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import framesVertexShader from "../shaders/frames/vertex.glsl";
-import framesFragmentShader from "../shaders/frames/fragment.glsl";
+import photosVertexShader from "../shaders/photos/vertex.glsl";
+import photosFragmentShader from "../shaders/photos/fragment.glsl";
 
-const Frames = ({ imageUrl, position }) => {
+const Photos = ({ imageUrl, position }) => {
   const shaderRef = useRef();
   const texture = useTexture(imageUrl);
 
@@ -20,8 +20,8 @@ const Frames = ({ imageUrl, position }) => {
       <planeGeometry args={[3, 4, 10, 10]} />
       <shaderMaterial
         ref={shaderRef}
-        vertexShader={framesVertexShader}
-        fragmentShader={framesFragmentShader}
+        vertexShader={photosVertexShader}
+        fragmentShader={photosFragmentShader}
         uniforms={{
           uTexture: { value: texture },
           uTime: { value: 0 },
@@ -33,4 +33,4 @@ const Frames = ({ imageUrl, position }) => {
   );
 };
 
-export default Frames;
+export default Photos;

@@ -2,7 +2,7 @@ import { useFrame } from "@react-three/fiber";
 import { useScroll } from "@react-three/drei";
 import Floor from "./Floor";
 import Arches from "./Arches";
-import Frames from "./Frames";
+import Photos from "./Photos";
 import { images } from "../utils/util";
 import Title from "./Title";
 
@@ -29,7 +29,7 @@ const FloorScene = () => {
           const x = side * (1.25 + Math.random() * 1.25);
           const y = -0.5 - Math.random() * 0.2;
           const z = -8 - index * 1.7;
-          return <Frames key={image} imageUrl={image} position={[x, y, z]} />;
+          return <Photos key={image} imageUrl={image} position={[x, y, z]} />;
         })}
       </group>
 
