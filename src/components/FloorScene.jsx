@@ -4,7 +4,7 @@ import Floor from "./Floor";
 import Arches from "./Arches";
 import Frames from "./Frames";
 import { images } from "../utils/util";
-import Logo from "./Logo";
+import Title from "./Title";
 
 const FloorScene = () => {
   const data = useScroll();
@@ -33,7 +33,7 @@ const FloorScene = () => {
         })}
       </group>
 
-      <Logo />
+      <Title />
     </group>
   );
 };

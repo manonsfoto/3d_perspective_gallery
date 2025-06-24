@@ -4,7 +4,7 @@ import { Billboard, shaderMaterial, Text } from "@react-three/drei";
 import * as THREE from "three";
 import { fontUrl } from "../utils/util";
 
-const Logo = () => {
+const Title = () => {
   const textRef = useRef();
 
   useFrame((state) => {
@@ -61,4 +61,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default Title;
