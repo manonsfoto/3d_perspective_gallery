@@ -45,7 +45,7 @@ const Title = () => {
 
   return (
     <Billboard ref={textRef} scale={0.5}>
-      <Text position-y={0.6} fontSize={0.35} font={fontUrl.alex}>
+      <Text position-y={0.6} fontSize={0.35} font={fontUrl.averia}>
         <textMaterial />
         Selected Photos by
       </Text>

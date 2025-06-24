@@ -14,5 +14,6 @@ export const images = [
 export const fontUrl = {
   bebas: "./fonts/bebas-neue-v9-latin-regular.woff",
   montserrat: "./fonts/montserrat-v30-latin-regular.woff",
-  alex: "./fonts/alex-brush-v22-latin-regular.woff",
+  playfair: "./fonts/playfair-display-v39-latin-600italic.woff",
+  averia: "./fonts/averia-serif-libre-v19-latin-italic.woff",
 };
