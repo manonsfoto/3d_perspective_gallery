@@ -2,6 +2,8 @@ import { Float, OrbitControls, ScrollControls } from "@react-three/drei";
 import FloorScene from "./FloorScene";
 import { EffectComposer, Noise } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
+import Godray from "./Godray";
+
 const Experience = () => {
   return (
     <>
@@ -11,6 +13,7 @@ const Experience = () => {
           premultiply
           blendFunction={BlendFunction.OVERLAY}
         />
+        <Godray />
       </EffectComposer>
       {/* <OrbitControls enableZoom={false} /> */}
       <fog attach="fog" args={["#ffffff", 3, 8]} />

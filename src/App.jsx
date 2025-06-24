@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Canvas flat>
-        <Perf position="top-left" />
+        <Perf position="bottom-left" />
         <Experience />
       </Canvas>
     </>
