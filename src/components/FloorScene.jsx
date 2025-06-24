@@ -29,9 +29,8 @@ const FloorScene = () => {
         .add(cameraDirection.multiplyScalar(2));
     }
   });
-  // ^^ text shader
-
-  // Text shader material
+  
+  // ^^ Text shader material
   const TextMaterial = shaderMaterial(
     {
       uTime: 0,
@@ -66,16 +65,16 @@ const FloorScene = () => {
       <Arches />
 
       <Billboard ref={textRef} scale={0.5}>
-        <Text position-y={0.6} fontSize={0.35} font={fontUrl.cardo}>
-          <textMaterial uColor="pink" />
+        <Text position-y={0.6} fontSize={0.35} font={fontUrl.alex}>
+          <textMaterial />
           Selected Photos by
         </Text>
         <Text position-y={0} fontSize={0.6} font={fontUrl.bebas}>
-          <textMaterial uColor="black" />
+          <textMaterial />
           MINYEONG JEONG
         </Text>
         <Text position-y={-0.5} fontSize={0.2} font={fontUrl.montserrat}>
-          <textMaterial uColor="black" />
+          <textMaterial />
           Urban Aesthetic
         </Text>
       </Billboard>

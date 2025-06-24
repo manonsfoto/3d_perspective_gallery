@@ -12,7 +12,7 @@ export const images = [
 ];
 
 export const fontUrl = {
-  cardo: "./fonts/cardo-v20-latin-italic.woff",
   bebas: "./fonts/bebas-neue-v9-latin-regular.woff",
   montserrat: "./fonts/montserrat-v30-latin-regular.woff",
+  alex: "./fonts/alex-brush-v22-latin-regular.woff",
 };
