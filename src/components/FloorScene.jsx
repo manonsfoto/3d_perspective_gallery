@@ -52,9 +52,7 @@ const FloorScene = () => {
       varying vec2 vUv;
       
       void main() {
-        // Simple pulsing effect
-        float pulse = sin(uTime * 2.0) * 0.1 + 0.9;
-        gl_FragColor = vec4(uColor * pulse, 1.0);
+        gl_FragColor = vec4(uColor, 1.0);
       }
     `
   );
