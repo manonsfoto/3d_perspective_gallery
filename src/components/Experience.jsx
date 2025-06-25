@@ -3,8 +3,15 @@ import FloorScene from "./FloorScene";
 import { EffectComposer, Noise } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import Godray from "./Godray";
-
+import { Howl, Howler } from "howler";
 const Experience = () => {
+  const sound = new Howl({
+    src: ["./Tiburtina-Schwartzy.mp3"],
+  });
+  sound.play();
+
+  Howler.volume(0.03);
+
   return (
     <>
       <EffectComposer>
