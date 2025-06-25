@@ -1,4 +1,4 @@
-import { Float, OrbitControls, ScrollControls, Stats } from "@react-three/drei";
+import { Float, ScrollControls } from "@react-three/drei";
 import FloorScene from "./FloorScene";
 import { EffectComposer, Noise } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
@@ -7,9 +7,12 @@ import Godray from "./Godray";
 const Experience = () => {
   return (
     <>
-      <Stats />
       <EffectComposer>
-        <Noise opacity={0.1} premultiply blendFunction={BlendFunction.OVERLAY} />
+        <Noise
+          opacity={0.1}
+          premultiply
+          blendFunction={BlendFunction.OVERLAY}
+        />
         <Godray />
       </EffectComposer>
       <fog attach="fog" args={["#ffffff", 3, 8]} />
