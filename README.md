@@ -1,8 +1,6 @@
 # 3D Perspective Gallery
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge)](https://3d-perspective-gallerybyminyeong.vercel.app/)
-
-An interactive 3D gallery experience built with React and Three.js
+[3D Perspective Gallery](https://3d-perspective-gallerybyminyeong.vercel.app/) built with React and Three.js
 
 ## About
 
